@@ -117,7 +117,7 @@ class Board
                 }
                 else
                 {
-                    Console.WriteLine($"행은 1~{_BoardNumber.GetLength(1)},열은 1~{_BoardNumber.GetLength(0)} 범위로  입력하세요.");
+                    Console.WriteLine($"열은 1~{_BoardNumber.GetLength(0)},행은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
                     continue;
                 }
 
@@ -145,7 +145,7 @@ class Board
         }
         else
         {
-            Console.WriteLine($"행은 1~{_BoardNumber.GetLength(1)},열은 1~{_BoardNumber.GetLength(0)} 범위로  입력하세요.");
+            Console.WriteLine($"열은 1~{_BoardNumber.GetLength(0)},행은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
             return;
         }
     }
