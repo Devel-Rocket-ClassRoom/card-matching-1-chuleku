@@ -54,28 +54,44 @@ while (gameflag)
                         endflag = false;
                     }
                 }
-                else
-                {
-                    Console.WriteLine("다시 입력해주세요.");
-                }
             }
         }
-        else
+    }
+    if(board.turnMatch==board.MaxMatch)
+    {
+        Console.WriteLine("=== 게임 종료 ===");
+        Console.WriteLine("짝을 모두 찾았습니다.");
+        Console.WriteLine();
+        Console.Write("새 게임을 하시겠습니까? (Y/N): ");
+        string input2 = Console.ReadLine();
+        Console.WriteLine();
+        if (input2.ToLower() == "y")
         {
-            Console.WriteLine("다시 입력해주세요.");
+            endflag = true;
+        }
+        else if (input2.ToLower() == "n")
+        {
+            break;
         }
     }
-    Console.Write("새 게임을 하시겠습니까? (Y/N): ");
-    string input2 = Console.ReadLine();
-    Console.WriteLine();
-    if (input2.ToLower() == "y")
+    else if(board._Turn== board._MaxTurn)
     {
-        endflag = true;
+        Console.WriteLine("=== 게임 종료 ===");
+        Console.WriteLine("턴이 모두 소진되었습니다.");
+        Console.WriteLine();
+        Console.Write("새 게임을 하시겠습니까? (Y/N): ");
+        string input3 = Console.ReadLine();
+        Console.WriteLine();
+        if (input3.ToLower() == "y")
+        {
+            endflag = true;
+        }
+        else if (input3.ToLower() == "n")
+        {
+            break;
+        }
     }
-    else if (input2.ToLower() == "n")
-    {
-        break;
-    }
+
 }
 
 
