@@ -83,12 +83,12 @@ class Board
         Console.Write("    ");
         for (int z = 0; z < _BoardNumber.GetLength(1); z++)
         {
-            Console.Write($"{z + 1}행 ");
+            Console.Write($"{z + 1}열 ");
         }
         Console.WriteLine();
         for (int i = 0; i < _BoardNumber.GetLength(0); i++)
         {
-            Console.Write($"{i + 1}열 ");
+            Console.Write($"{i + 1}행 ");
             for (int j = 0; j < _BoardNumber.GetLength(1); j++)
             { 
                 Console.Write($"{DisplayBoard[i, j]}  ");
@@ -117,7 +117,7 @@ class Board
                 }
                 else
                 {
-                    Console.WriteLine($"열은 1~{_BoardNumber.GetLength(0)},행은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
+                    Console.WriteLine($"행은 1~{_BoardNumber.GetLength(0)},열은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
                     continue;
                 }
 
@@ -145,7 +145,7 @@ class Board
         }
         else
         {
-            Console.WriteLine($"열은 1~{_BoardNumber.GetLength(0)},행은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
+            Console.WriteLine($"행은 1~{_BoardNumber.GetLength(0)},열은 1~{_BoardNumber.GetLength(1)} 범위로  입력하세요.");
             return;
         }
     }
